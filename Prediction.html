@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body{
+            width: 100%;
+        }
+        h1{
+            background-color: brown;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 15px;
+            font-family: sans-serif;
+            margin: auto;
+        }
+        h2{
+            background-color: brown;
+            /* padding:4px; */
+            color: white;
+            float: left;
+            height: 900px;
+            width: 130px;
+            margin: auto;
+        
+            /* font-size: 10px; */
+        }
+      
+        p{
+            background-color: rgb(18, 162, 49);
+            width: 120px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 2px;
+            padding-right: 2px;
+            cursor: pointer;
+            text-align: center;
+           
+            /* border: 2px solid white; */
+            
+           
+
+        }
+        /* h5{
+            background-color: rgb(18, 162, 49);
+            width: 75px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            padding-bottom: 10px;
+            padding-top: 10px;
+            padding-left: 2px;
+            padding-right: 2px;
+            cursor: pointer;
+        } */
+        p:hover{
+            background-color: white;
+           color: black;
+        }
+        footer{
+            /* background-color:rgb(159, 51, 51);; */
+            padding: 1px;
+            color: rgb(201, 11, 11);
+            font-family: sans-serif;
+            font-style: italic;
+            /* text-align: center; */
+            /* width: 5000px; */
+           
+          
+        }
+        h4{
+            text-align: center;
+            /* background-color: #471515cc; */
+            /* width: 100%; */
+            margin-top: 15px;
+        }
+        
+        form{
+            margin-top: 30px;
+            /* width: 100%; */
+            /* display: inline-block; */
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        input[type=text],select{
+            width: 99%;
+            display: flex;
+            padding: 10px 8px;
+            margin: 7px;
+            border: 2px  solid #582828cc;
+            box-sizing: border-box;
+            border-radius: 8px;
+           
+        }
+        input[type=number],select{
+            width: 99%;
+            display: flex;
+            padding: 10px 8px;
+            margin: 7px;
+            border: 2px  solid #582828cc;
+            box-sizing: border-box;
+            border-radius: 8px;
+           
+        }
+        input[type=radio],select{
+            display: flex;
+            display: inline-block;
+            margin: 5px;
+            padding: 12px 8px;
+        
+           
+        }
+        input[type=password],select{
+            width: 99%;
+            padding: 12px  8px;
+            margin: 5px;
+            border: 2px solid #471515cc;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+        input[type=submit]{
+            width: 20%;
+            padding: 4px 4px;
+            margin: 4px;
+            background-color: blueviolet;
+            border-radius: 8px;
+            color: white;
+            font-size: 20px;
+            font-family: sans-serif;
+            border: none;
+           
+        }
+        input[type=clear]{
+            text-align: center;
+            float: right;
+            width: 20%;
+            padding: 4px 4px;
+            margin: 4px;
+            background-color: blueviolet;
+            border-radius: 8px;
+            color: white;
+            font-size: 20px;
+            font-family: sans-serif;
+            border: none;
+        }
+        input[type=clear]:hover{
+            background-color: rgb(41, 24, 56);
+            color: white;
+            box-shadow: 2px 2px 2px 2px  rgb(126, 153, 126) ;
+            transition: 0.4s ease-in-out;
+            
+
+        }
+        input[type=submit]:hover{
+            background-color: rgb(41, 24, 56);
+            color: white;
+            box-shadow: 2px 2px 2px 2px  rgb(126, 153, 126) ;
+            transition: 0.4s ease-in-out;
+            
+
+        }
+        /* lables */
+        label{
+            font-size: 16px;
+            color: black;
+            font-family: 'Times New Roman', Times, serif;
+            padding: 2px;
+            margin: 5px;
+            font-weight: bold;
+        }
+        ::placeholder{
+            color: blueviolet;
+            opacity: 0.4;
+            font-family: serif;
+            padding: 2px;
+            margin: 2px;
+            font-size: 13px;
+            /* font-weight:bold; */
+        }
+       ul{
+        list-style-type: none;
+        padding: 10px;
+        font-size: 18px;
+        margin-top: 150px;
+        font-family: 'Times New Roman', Times, serif;
+        
+       }
+       ul li{
+        margin: auto;
+        padding: 4px;
+        cursor: pointer;
+        padding: 15px;
+        
+       }
+   
+     a{
+        color:white;
+        text-decoration: none;
+     }
+     a:hover{
+        color:black
+     }
+     footer a:hover{
+        color: black;
+     }
+     body{
+        background-image: url(./img/cover4.png);
+        /* background-image: url(./img/cover.jpg); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: auto;
+     }
+  
+    </style>
+</head>
+<body>
+    <h1>Employee Prediction </h1>
+    <h2>
+      <p> Dashboard</p>
+      <ul>
+          <li><a href="./Home.html">Home</a></li>
+          <li><a href="./Prediction.html">Prediction</a></li>
+          <li><a href="./Result.html">Analysis</a></li>
+        <li style="background-color: rgb(121, 152, 90); border-radius: 20px;text-align: center;margin-top: 100px;"><a href="./Login.html">Back</a></li>
+
+        
+      </ul>
+    
+     
+      </h2>
+     
+    <form action="/">
+        <label for="fname">Fisrt Name</label>
+        <input type="text" name="fname" placeholder="Enter Your Name " required>
+
+        <label for="number">Experience</label>
+        <input type="number" name="number" placeholder="Experience
+        " required>
+        <label for="department">Department</label>
+        <select>
+            <option value="option1">Digital Marketing </option>
+            <option value="option2">Web Development</option>
+            <option value="option3">Graphic Design</option>
+            <option value="option4">Content Creator </option>
+            <option value="option5">Progarammer</option>
+            <option value="option6">Freelancer</option>
+        </select>
+        <label for="age">Age</label>
+        <input type="number" name="age" placeholder="Age
+        " required>
+          
+        <label for="gender">Gender:</label>
+            <input type="radio" name="gender" value="Male"> Male
+          
+        
+            <input type="radio" name="gender" value="female"> Female
+         
+
+          <label for="Education">Education:</label>
+            <input type="radio" name="Education" value="High School"> High School
+            <input type="radio" name="Education" value="Batch"> Batch
+            <input type="radio" name="Education" value="Master"> Master
+            <input type="radio" name="Education" value="Another"> Another Skill
+          <br>
+          <br>
+
+          <label for="Number of trainings
+          "> Number of trainings
+        </label>
+          <input type="number" name="Number of trainings
+          " placeholder="Number of trainings
+
+          " required>
+            
+          <label>
+
+          <label for="Previous Year Rating
+
+          ">Previous Year Rating
+
+        </label>
+          <input type="number" name="Previous Year Rating
+
+          " required placeholder="Previous Year Rating
+          ">
+            
+          <label>
+            
+          <label for="Length of service address
+
+          ">Length of service address
+
+        </label>
+          <input type="number" name="Length of service address
+
+
+          " required placeholder="Length of service address
+
+          ">
+            
+          <label>
+
+          <label>
+            
+          <label for="Average Training Score: 80%
+
+          ">Average Training Score: 80%
+
+        </label>
+          <input type="number" name="Average Training Score: 80%
+
+
+
+          " required placeholder="Average Training Score: 80%
+
+          ">
+            
+          <label>
+            <label for="Region:
+            ">Region:
+        </label>
+            <select>
+                <option value="option1">Region 1
+                </option>
+                <option value="option2">Region 1</option>
+                <option value="option3">Region 1</option>
+                <option value="option4">Region 1 </option>
+                <option value="option5">Region 1</option>
+                <option value="option6">Region 1</option>
+                <option value="option6">Region 1</option>
+                <option value="option6">Region 1</option>
+                <option value="option6">Region 1</option>
+                <option value="option6">Region 1</option>
+                <option value="option6">Region 1</option>
+                <option value="option6">Region 1</option>
+                <option value="option6">Region 1</option>
+                <option value="option6">Region 1</option>
+                <option value="option6">Region 1</option>
+            </select>
+
+            <label>
+                <label for="Recruitment channel
+                :
+                ">Recruitment channel
+                :
+            </label>
+                <select>
+                    <option value="option1"> Channel 1
+                    </option>
+                    <option value="option2"> Channel 11</option>
+                    <option value="option3"> Channel 1</option>
+                    <option value="option4"> Channel 1 </option>
+                    <option value="option5"> Channel 11</option>
+                    <option value="option6"> Channel 11</option>
+                    <option value="option6"> Channel 11</option>
+                    <option value="option6"> Channel 11</option>
+                    <option value="option6"> Channel 11</option>
+                    <option value="option6"> Channel 11</option>
+                    <option value="option6"> Channel 1</option>
+                    <option value="option6"> Channel 11</option>
+                    <option value="option6"> Channel 11</option>
+                    <option value="option6"> Channel 11</option>
+                    <option value="option6"> Channel 11</option>
+                </select>
+
+            <label for="kpls">kpls >80:</label>
+            <input type="radio" name="yes" value="yes"> Yes
+          
+        
+            <input type="radio" name="no" value="no"> No
+
+         
+            <label for="Awards Won:">Awards Won:</label>
+            <input type="radio" name="yes" value="yes"> Yes
+          
+        
+            <input type="radio" name="no" value="no"> No
+         
+            
+        <input type="submit" value="Submit">
+        <input type="clear" value="Clear">
+    </form>
+    <footer>
+        <h4>@Copy 2024 <a style="color: rgb(222, 53, 87); " href="https://www.aashdigital.com">Aash Digital </a>. All rights reserved</h4>
+      </footer>
+    
+</body>
+</html>
